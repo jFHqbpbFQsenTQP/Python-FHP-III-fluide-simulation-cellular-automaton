@@ -96,11 +96,13 @@ buttons = [b_go, b_reset, b_alea, b_mur_horizon, b_fibre, b_flux]
 
 def main_interface_graphique() :
     flux = False
-
+    
+    """
     # Création de la fenêtre pygame
     pygame.init()
     fenetre = pygame.display.set_mode((largeur, hauteur))
     pygame.display.set_caption("Bouton Pygame")
+    """
     
     grille = initialize()
 
