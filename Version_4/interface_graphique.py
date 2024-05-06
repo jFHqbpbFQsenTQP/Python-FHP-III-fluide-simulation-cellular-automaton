@@ -59,6 +59,7 @@ def genere_fibre() :
     print("Les fibres sont crées")
     return positions_occupees
 
+
 # Classe de bouton
 class Bouton:
     def __init__(self, x, y, largeur, hauteur, couleur_normale, texte):
@@ -105,6 +106,21 @@ def main_interface_graphique() :
 
     grille_transpose = np.transpose(grille)
 
+    #Je passe en mode flux
+    print("Bouton Flux cliqué")
+    flux = not flux
+    print("flux = ", flux)
+    
+    #Je rajoute les fibres
+    fibres = genere_fibre()
+    forme, taille = points_dans_disque(rayon_fibre)
+    for (x, y) in fibres :
+        for k in range(taille) :
+            (dx, dy) = forme[k]
+            grille_transpose[x + dx, y + dy] = w
+    
+    
+    """
     # Boucle pygame qui sert a générer ma simulation
     en_cours = True
     while en_cours:
@@ -134,21 +150,7 @@ def main_interface_graphique() :
                   for x in range(colonnes) :
                     grille_transpose[x, 0] = w
                     grille_transpose[x, lignes -1] = w
-            """
-            #Quand le bouton vertical est cliqué, on enleve les murs verticaux ce qui rend la boite periodique
-            if event.type == pygame.MOUSEBUTTONDOWN and b_mur_vertical.survol():
-                print("Bouton Vertical cliqué")
-                if v_perio :
-                  v_perio = False
-                  for y in range(lignes) :
-                    grille_transpose[0, y] = 0
-                    grille_transpose[colonnes -1, y] = 0
-                else :
-                  v_perio = True
-                  for y in range(lignes) :
-                    grille_transpose[0, y] = w
-                    grille_transpose[colonnes -1, y] = w
-            """
+
 
             #Quand le bouton fibre est cliqué, on remplit aléatoirement la grille avec des fibres
             if event.type == pygame.MOUSEBUTTONDOWN and b_fibre.survol():
@@ -304,5 +306,6 @@ def main_interface_graphique() :
 
     pygame.quit()
     #On sort de la fenêtre pygame, le code se lance 
-
+    """
+    
     return (np.transpose(grille_transpose), flux)
