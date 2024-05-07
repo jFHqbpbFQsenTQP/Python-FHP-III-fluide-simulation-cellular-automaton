@@ -16,6 +16,7 @@ from interface_graphique import *
 from video import *
 from collections import deque
 
+
 #Donne les coordonnées relatives des pixels d'un cercle
 def points_dans_disque(rayon):
     points = []
