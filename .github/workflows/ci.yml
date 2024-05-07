@@ -34,9 +34,11 @@ jobs:
     - name: Run apps
       run: |
         python Version_4/main.py
-    - name : Save files
+    - name : Save Video
       uses: actions/upload-artifact@v4
       with : 
-        path : 
-          - alpha_40_fibre_13.mp4
-          - alpha_40_fibre_13.png
+        path : alpha_40_fibre_13.mp4
+    - name : Save Diagramme
+      uses: actions/upload-artifact@v4
+      with : 
+        path : alpha_40_fibre_13.png
