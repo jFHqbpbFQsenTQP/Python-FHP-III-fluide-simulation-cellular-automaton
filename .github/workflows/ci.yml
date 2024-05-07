@@ -32,10 +32,6 @@ jobs:
     - name: Archive video
       uses: actions/upload-artifact@v4
       with:
-        name: video
-        path: alpha_40_fibre_13.mp4
-    - name: Archive image
-      uses: actions/upload-artifact@v4
-      with:
-        name: video
-        path: alpha_40_fibre_13.png      
+        name: generated
+        path: alpha_40_fibre_13.*
+       
