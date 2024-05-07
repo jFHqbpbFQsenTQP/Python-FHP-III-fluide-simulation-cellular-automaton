@@ -39,4 +39,4 @@ nb_fibres = (volume_total - porosite*volume_total) / volume_fibre
 
 full_screen = True
 save_name = "alpha_40_fibre_13.mp4"
-save_name_diagramme = "alpha_40_fibre_13.png"
+save_name_diagramme = "alpha_40_fibre_13_diagramme.png"
