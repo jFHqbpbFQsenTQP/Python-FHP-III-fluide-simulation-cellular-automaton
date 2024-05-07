@@ -13,6 +13,7 @@ from matplotlib.animation import FuncAnimation
 from initialisation_constante import *
 from reglage import *
 
+
 #Nombre de particule dans un noeud  
 def count_set_bits(number):
     count = 0
