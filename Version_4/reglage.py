@@ -4,8 +4,8 @@ lignes = 500
 
 #Parametre de la simulation
 nb_particules = 3 * 100 * 100
-nb_iterations = 23
-nb_iterations_de_purge = 0 #1000 pour vider le filtre pour ne pas fausser le diagramme
+nb_iterations = 3000
+nb_iterations_de_purge = 1000 #1000 pour vider le filtre pour ne pas fausser le diagramme
 alpha = 40
 """
 500 * 500 et 4000 iteration => 3h30 annoncé 
