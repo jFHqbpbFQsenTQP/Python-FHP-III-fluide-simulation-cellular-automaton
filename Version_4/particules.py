@@ -26,6 +26,7 @@ def points_dans_disque(rayon):
                 points.append((x, y))
     return (points, len(points))
 
+
 #Fonction qui verifie si un point est dans la grille. Utiliser pour eviter les beugs.
 def est_dans_grille(i,j) :
   return 0 <= i and i < lignes and 0 <= j and j < colonnes
