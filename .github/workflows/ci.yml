@@ -30,7 +30,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r Version_4/requirements.txt
     - name: Add ffmpeg
-      run : apt install ffmpeg
+      run : sudo apt install ffmpeg
     - name: Run apps
       run: |
         python Version_4/main.py
