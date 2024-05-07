@@ -41,4 +41,4 @@ jobs:
     - name : Save Diagramme
       uses: actions/upload-artifact@v4
       with : 
-        path : alpha_40_fibre_13.png
+        path : alpha_40_fibre_13_diagramme.png
