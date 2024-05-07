@@ -5,12 +5,9 @@ name: Python application
 
 on:
   push:
-    branches: [ "main", "fix-ci"]
+    branches: [ "main", "fix-video"]
   pull_request:
     branches: [ "main" ]
-
-permissions:
-  contents: read
 
 jobs:
   build:
@@ -19,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Set up ffmpeg
+      run: sudo apt-get install -y ffmpeg
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -30,4 +29,9 @@ jobs:
     - name: Run apps
       run: |
         python Version_4/main.py
-        
+    - name: Archive video
+      uses: actions/upload-artifact@v4
+      with:
+        name: generated
+        path: alpha_40_fibre_13.*
+       
