@@ -28,7 +28,7 @@ flux_continu_particule = True
 rayon_particule = 3
 
 # Paramètres des fibres
-rayon_fibre = 13
+rayon_fibre = 10
 volume_fibre = 1 * 3.14 * rayon_fibre * rayon_fibre
 epaisseur = 430 # en 0.1µm
 debut_filtre = 50
@@ -39,5 +39,5 @@ porosite = 0.80
 nb_fibres = (volume_total - porosite*volume_total) / volume_fibre
 
 full_screen = True
-save_name = "Files/alpha_40_fibre_13.mp4"
-save_name_diagramme = "Files/alpha_40_fibre_13.png"
+save_name = "Files/alpha_40_fibre_10.mp4"
+save_name_diagramme = "Files/alpha_40_fibre_10.png"
